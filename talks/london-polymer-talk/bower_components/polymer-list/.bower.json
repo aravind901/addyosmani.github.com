@@ -1,0 +1,19 @@
+{
+  "name": "polymer-list",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.1.4",
+    "polymer-selection": "Polymer/polymer-selection#0.1.4"
+  },
+  "version": "0.1.4",
+  "homepage": "https://github.com/Polymer/polymer-list",
+  "_release": "0.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.4",
+    "commit": "3539d5064cc4f5b1bdde508b5831b3dde96485b2"
+  },
+  "_source": "git://github.com/Polymer/polymer-list.git",
+  "_target": "0.1.4",
+  "_originalSource": "Polymer/polymer-list"
+}

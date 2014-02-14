@@ -1,0 +1,43 @@
+Useful links
+
+
+start by showing BOWER.
+
+bower install Polymer/yt-video
+.. serve it after install
+inspect
+open in sublime and show it.
+NOTE: KEYWORDS, LIFECYCLE, SHADOW ROOT.
+
+then next thing..
+
+learn in element styling.
+
+Angular Jukebox: https://github.com/jgthms/juketube
+
+Brick: http://mozilla.github.io/brick/
+
+Web Comps Bower: http://sindresorhus.com/bower-components/#!/search/web-components
+
+chromestatus.com
+
+http://todomvc.com/architecture-examples/polymer/index.html
+
+
+http://www.polymer-project.org/polymer-all/polymer-elements/polymer-ajax/index.html
+
+http://www.polymer-project.org/docs/elements/#ui-elements
+
+http://www.polymer-project.org/polymer-all/polymer-ui-elements/polymer-ui-accordion/index.html
+
+http://www.polymer-project.org/polymer-all/polymer-ui-elements/polymer-ui-menu/index.html
+
+
+include?
+http://robdodson.me/webcomponents-revolution/#/33
+
+
+https://github.com/Polymer/vulcanize
+
+http://customelements.io/
+
