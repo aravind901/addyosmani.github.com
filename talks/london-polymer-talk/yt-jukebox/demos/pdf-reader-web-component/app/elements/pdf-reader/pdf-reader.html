@@ -1,0 +1,78 @@
+<polymer-element name="pdf-reader"  attributes="">
+
+  <template>
+
+    <!-- build:style inline main -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- /build -->
+
+    <style>
+      @host {
+        :scope {
+          display: block;
+          font: normal 16px Calibri, "Trebuchet MS", Verdana, sans-serif;
+          overflow: hidden;
+        }
+      }
+    </style>
+
+    <div class="pdf-viewer">
+      <div class="pdf-toolbar">
+        <ul class="pdf-ul">
+          <li class="pdf-page-nav pdf-hidden">
+            <div class="pdf-next-prev">
+              <div class="pdf-nav pdf-prev pdf-disabled"></div>
+              <div class="pdf-nav pdf-next"></div>
+            </div>
+            <span>Page:</span>
+            <input type="text" class="pdf-page-num pdf-input-field" autocomplete="off">
+            <span>of <span class="pdf-total-page"></span></span>
+          </li>
+          <li class="pdf-scale">
+            <div class="pdf-scale-down"></div>
+            <div class="pdf-scale-up"></div>
+            <select class="pdf-zoom-lvl pdf-input-field">
+              <option class="pdf-custom-zoom pdf-hidden"></option>
+              <option class="pdf-fit-zoom" selected="selected" value="fit">Page Fit</option>
+              <option value="width">Page Width</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+              <option value="125">125%</option>
+              <option value="150">150%</option>
+              <option value="200">200%</option>
+            </select>
+          </li>
+          <li class="pdf-download">
+            <button class="pdf-btn" type="button"></button>
+          </li>
+        </ul>
+      </div>
+      <div class="pdf-viewport-out">
+        <canvas class="pdf-viewport"></canvas>
+      </div>
+    </div>
+
+  </template>
+
+  <!-- build:script inline bundle -->
+  <script src="scripts/vendor/pdf.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- /build -->
+
+  <script>
+    Polymer('pdf-reader', {
+      //applyAuthorStyles: true,
+      //resetStyleInheritance: true,
+      created: function() {
+        this.instance = new Polymer.Reader(this);
+      },
+      enteredView: function() { },
+      leftView: function() { },
+      attributeChanged: function (attrName, oldVal, newVal) {
+        this.instance.setSize(attrName, newVal);
+      }
+    });
+  </script>
+
+</polymer-element>
