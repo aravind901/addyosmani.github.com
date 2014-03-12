@@ -12,9 +12,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" media="all" href="theme/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" media="all" href="theme/css/default.css">
-  <link rel="stylesheet" media="all" href="theme/css/app.css">
-  <link rel="stylesheet" media="all" href="theme/css/polymer.css">
+  <link rel="stylesheet" media="all" href="theme/css/app_raw.css">
+  <link rel="stylesheet" media="all" href="theme/css/polymer_raw.css">
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
 
   <script src="bower_components/platform/platform.js"></script>
@@ -58,18 +59,20 @@
   </article>
 </slide> -->
 
-<!-- <slide id="first-slide" class="nobackground"></slide>
- -->
+ <slide id="first-slide" class="nobackground curtain"></slide>
+ 
+<!--
+<slide id="title-slide" class="nobackdrop nobackground do-transition" style="background:#EEEEEE; background-image:url('images/poly.fw.png'); background-size:cover;">-->
 
-<slide id="title-slide" class="nobackdrop nobackground do-transition" style="background:#EEEEEE; background-image:url('images/poly.fw.png'); background-size:cover;">
+<slide id="title-slide" class=" segue nobackground curtain" >
   <!-- <aside class="gdbar"><img src="images/logos/webcomponents.png"></aside> -->
   <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-  <article class="auto-fadein flexbox vcenter">
+  <article class="flexbox vcenter">
     <hgroup style="display:none">
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
     </hgroup>
-    <p data-config-presenter style="color:black"><!-- populated from slide_config.json --></p>
+    <p data-config-presenter style="color:black; display:none"><!-- populated from slide_config.json --></p>
   </article>
   <video data-src="videos/universe.webm" class="fullviewport"></video>
   <audio data-src="audio/Stellardrone-Introspace.mp3" loop></audio>
@@ -134,12 +137,11 @@
 <div>
 <ul class="build">
 <li><a href="yt-jukebox/demos/other/blink/blink.html">&lt;x-blink&gt;</a></li>
-<li><a href="yt-jukebox/demos/chart-js-polymer/index.html">&lt;chart&gt;</a></li>
+<li><a href="yt-jukebox/demos/chart-js-polymer/index.html">&lt;x-chart&gt;</a></li>
+<li><a href="demos/components/bower_components/polymer-ui-tabs/smoke.html">&lt;x-tabs&gt;</a> (<a href="demos/components/tabbed-content/index.html">&lt;tabbed-content&gt;</a>)</li>
 <li><a href="demos/components/x-miley/demo.html">&lt;x-miley&gt;</a></li>
-<li><a href="demos/components/polymer-ui-carousel/smoke.html">&lt;x-carousel&gt;</a></li>
 <li><a href="demos/components/x-slideshow/index.html">&lt;x-slideshow&gt;</a></li>
 <li><a href="demos/components/video-camera-element/index.html">&lt;video-camera&gt;</a></li>
-<li><a href="demos/components/prism-js/index.html">&lt;prism-js&gt;</a></li>
 <li><a href="demos/components/flappy-bird/index.html">&lt;flappy-bird&gt;</a></li>
 <li><a href="demos/components/pica/index.html">Pica</a></li>
 </ul>
@@ -147,7 +149,7 @@
  
 </slide>
 
-<slide id="agenda" class="large"   >
+<slide id="agenda" class="large"  hidden >
   
     <hgroup>
       <span>
@@ -1023,7 +1025,7 @@ $(div).find('[data-my-widget]').myWidget();
         
         
       </span>
-      <h2>The Web Component way</h2>
+      <h2>Using a custom element</h2>
       <h3></h3>
     </hgroup>
     <article>
@@ -1179,8 +1181,11 @@ dialog::backdrop {
 Register a new custom element <code>my-element</code>
  <pre class="prettyprint" data-lang="JavaScript">
 var MyElement = document.registerElement('my-element');
-document.body.appendChild(new MyElement());
 </pre>
+ <pre class="prettyprint" data-lang="HTML">
+&lt;my-element&gt;
+</pre>
+<!--document.body.appendChild(new MyElement());-->
 </p>
 
 <p>
@@ -2590,6 +2595,23 @@ on-keypress=&quot;{{keypressHandler}}&quot; tabIndex=&quot;1&quot;&gt;
 </pre>
 </article>
 
+</slide>
+
+
+<slide    data-body-class="platform-fill" >
+  
+    <hgroup>
+      <span>
+        
+        
+        
+        
+      </span>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter"><h2 class="faded"><em>SEO</em> friendly</h2></article>
+ 
 </slide>
 
 <slide     hidden>
