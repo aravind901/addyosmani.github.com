@@ -1380,18 +1380,18 @@ Style the current element hosting a shadow tree
 </p>
 
 <p>
-Piece one level of the Shadow DOM (^) ~ upper shadow boundary
+Piece one level of the Shadow DOM (/shadow/) ~ upper shadow boundary
 
  <pre class="prettyprint" data-lang="CSS">
-my-element ^ h2{
+my-element /shadow/ h2{
   color: green;
 }
 </pre>
 </p>
 <p>
-Pierce every layer of the Shadow DOM (^^) ~ all shadow boundaries
+Pierce every layer of the Shadow DOM (/shadow-deep/) ~ all shadow boundaries
  <pre class="prettyprint" data-lang="CSS">
-my-element ^^ h2{
+my-element /shadow-deep/ h2{
   font-family: 'Comic Sans';
 }
 </pre>
