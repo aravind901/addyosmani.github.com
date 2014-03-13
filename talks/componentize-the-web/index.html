@@ -1025,7 +1025,7 @@ $(div).find('[data-my-widget]').myWidget();
         
         
       </span>
-      <h2>Using a custom element</h2>
+      <h2>Using a Custom Element</h2>
       <h3></h3>
     </hgroup>
     <article>
@@ -1047,7 +1047,7 @@ Consume:
 div.innerHTML = '&lt;my-widget /&gt;';
 </pre>
 </p>
-
+<!--
 <p>
 Get encapsulation for free:
  <pre class="prettyprint" data-lang="Shadow DOM">
@@ -1058,6 +1058,7 @@ Get encapsulation for free:
   &lt;/div&gt;
 </pre>
 </p>
+-->
 
 </div></article>
  
@@ -1171,7 +1172,7 @@ dialog::backdrop {
         
         
       </span>
-      <h2>Custom Elements</h2>
+      <h2>Creating Custom Elements</h2>
       <h3></h3>
     </hgroup>
     <article>
@@ -1324,7 +1325,7 @@ var MegaButton = document.registerElement('mega-button', {
 
 <p>
 Custom elements have encapsulated styles by default
- <pre class="prettyprint" data-lang="JavaScript">
+ <pre class="prettyprint" data-lang="JavaScript" data-run-demo="demos/components/styling/index.html">
 shadow = this.createShadowRoot();
 shadow.innerHTML =
   &quot;&lt;style&gt;span { color: green; }&lt;/style&gt;&quot; +
