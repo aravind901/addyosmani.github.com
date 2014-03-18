@@ -154,8 +154,8 @@
 <ul class="build">
 <li><a href="yt-jukebox/demos/other/blink/blink.html">&lt;x-blink&gt;</a></li>
 <li><a href="yt-jukebox/demos/chart-js-polymer/index.html">&lt;x-chart&gt;</a></li>
-<li><a href="demos/components/x-miley/demo.html">&lt;x-miley&gt;</a></li>
 <li><a href="demos/components/bower_components/polymer-ui-tabs/smoke.html">&lt;x-tabs&gt;</a> (<a href="demos/components/tabbed-content/index.html">&lt;tabbed-content&gt;</a>, <a href="demos/components/polymer-ui-carousel/smoke-labels.html">&lt;x-carousel&gt;</a>)</li>
+<li><a href="demos/components/x-miley/demo.html">&lt;x-miley&gt;</a></li>
 <li><a href="demos/components/smashing-video/index.html">&lt;smashing-video&gt;</a> <!--(<a href="demos/components/faster-video/index.html">&lt;faster-video&gt;</a>)--> </li>
 <li><a href="demos/components/video-camera-element/index.html">&lt;video-camera&gt;</a></li>
 <li><a href="demos/components/x-slideshow/index.html">&lt;x-slideshow&gt;</a></li><!--
@@ -1341,12 +1341,11 @@ var MegaButton = document.registerElement('mega-button', {
 
 
 <p>
-Custom elements have encapsulated styles by default
+Custom elements can have encapsulated styles
  <pre class="prettyprint" data-lang="JavaScript" data-run-demo="demos/components/styling/index.html">
 shadow = this.createShadowRoot();
 shadow.innerHTML =
-  &quot;&lt;style&gt;span { color: green; }&lt;/style&gt;&quot; +
-  &quot;&lt;span&gt;I'm green&lt;/span&gt;&quot;;
+  &quot;&lt;style&gt;span { color: green; }&lt;/style&gt;&quot; + &quot;&lt;span&gt;I'm green&lt;/span&gt;&quot;;
 </pre>
 
  <pre class="prettyprint" data-lang="HTML">
@@ -1356,14 +1355,13 @@ shadow.innerHTML =
 </p>
 
 <p>
-Custom elements can have hidden internal DOM structures (shadow host)
+...and hidden internal DOM structures (shadow host)
  <pre class="prettyprint" data-lang="HTML">
 &lt;button&gt;Hello, world!&lt;/button&gt;
 &lt;script&gt;
 var host = document.querySelector('button');
 var root = host.createShadowRoot();
 root.textContent = 'How you doing?';
-&lt;/script&gt;
 </pre>
 </p>
 
@@ -1389,15 +1387,6 @@ root.textContent = 'How you doing?';
  <div class="build">
 
 <p>
-Style the current element hosting a shadow tree
- <pre class="prettyprint" data-lang="CSS">
-:host {
-  color: green;
-}
-</pre>
-</p>
-
-<p>
 Piece one level of the Shadow DOM (/shadow/) ~ upper shadow boundary
 
  <pre class="prettyprint" data-lang="CSS">
@@ -1410,7 +1399,7 @@ my-element /shadow/ h2{
 Pierce every layer of the Shadow DOM (/shadow-deep/) ~ all shadow boundaries
  <pre class="prettyprint" data-lang="CSS">
 my-element /shadow-deep/ h2{
-  font-family: 'Comic Sans';
+  color: purple;
 }
 </pre>
 </p>
